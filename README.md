@@ -1,3 +1,5 @@
+Here is the updated documentation with examples transformed to JSX syntax:
+
 # Naive React-like Library
 
 This is a naive implementation of a React-like library designed to manage a virtual DOM, component lifecycle, and state management. 
@@ -29,22 +31,22 @@ npm build
 
 ### Basic Example
 
-```javascript
+```jsx
 import ftReact from '@rabarbra/ft_react';
 
 function App() {
   const [count, setCount] = ftReact.useState(0);
-  return ftReact.createElement(
-    'div',
-    { style: { textAlign: 'center' } },
-    ftReact.createElement('h1', null, 'Hello, World!'),
-    ftReact.createElement('p', null, `Count: ${count}`),
-    ftReact.createElement('button', { onClick: () => setCount(count + 1) }, 'Increment')
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <h1>Hello, World!</h1>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
   );
 }
 
 const container = document.getElementById('root');
-ftReact.render(ftReact.createElement(App, null), container);
+ftReact.render(<App />, container);
 ```
 
 ## API
@@ -53,15 +55,15 @@ ftReact.render(ftReact.createElement(App, null), container);
 
 Creates a virtual DOM element.
 
-```javascript
-const element = ftReact.createElement('div', { id: 'my-div' }, 'Hello, World!');
+```jsx
+const element = <div id="my-div">Hello, World!</div>;
 ```
 
 ### `render`
 
 Renders a virtual DOM element to the actual DOM.
 
-```javascript
+```jsx
 const container = document.getElementById('root');
 ftReact.render(element, container);
 ```
@@ -70,13 +72,13 @@ ftReact.render(element, container);
 
 Manages state in a functional component.
 
-```javascript
+```jsx
 function Counter() {
   const [count, setCount] = ftReact.useState(0);
-  return ftReact.createElement(
-    'button',
-    { onClick: () => setCount(count + 1) },
-    `Count: ${count}`
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Count: {count}
+    </button>
   );
 }
 ```
@@ -85,7 +87,7 @@ function Counter() {
 
 Performs side effects in a functional component.
 
-```javascript
+```jsx
 function Timer() {
   const [time, setTime] = ftReact.useState(0);
 
@@ -94,7 +96,7 @@ function Timer() {
     return () => clearInterval(interval);
   }, [time]);
 
-  return ftReact.createElement('div', null, `Time: ${time}`);
+  return <div>Time: {time}</div>;
 }
 ```
 
@@ -102,19 +104,19 @@ function Timer() {
 
 ### Simple Counter
 
-```javascript
+```jsx
 function Counter() {
   const [count, setCount] = ftReact.useState(0);
-  return ftReact.createElement(
-    'div',
-    null,
-    ftReact.createElement('p', null, `Count: ${count}`),
-    ftReact.createElement('button', { onClick: () => setCount(count + 1) }, 'Increment')
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
   );
 }
 
 const container = document.getElementById('root');
-ftReact.render(ftReact.createElement(Counter, null), container);
+ftReact.render(<Counter />, container);
 ```
 
 ## License
