@@ -1,0 +1,12 @@
+{
+  "name": "ft_react",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Naive implementation of React-like library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Polina Simonenko",
+  "license": "MIT"
+}
