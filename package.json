@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Naive implementation of React-like library",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "ft_react_setup": "./scripts/setup_project.js"
+  },
+  "files": [
+    "dist",
+    "scripts/setup_project.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/rabarbra/ft_react.git"

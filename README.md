@@ -12,15 +12,21 @@ This is a naive implementation of a React-like library designed to manage a virt
 ## Installation
 
 ```bash
-npm -i ft-react
+npm -i ft_react
 ```
 
 ## Usage
 
+### Generate basic app
+
+```bash
+./node_modules/ft_react/scripts/setup_project.js
+```
+
 ### Basic Example
 
 ```javascript
-import ftReact from 'ft-react';
+import ftReact from 'ft_react';
 
 function App() {
   const [count, setCount] = ftReact.useState(0);
