@@ -12,7 +12,7 @@ This is a naive implementation of a React-like library designed to manage a virt
 ## Installation
 
 ```bash
-npm -i @rabarbra/ft_react
+npm install @rabarbra/ft_react
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ npm -i @rabarbra/ft_react
 ### Generate basic app
 
 ```bash
-./node_modules/ft_react/scripts/setup_project.js
+./node_modules/@rabarbra/ft_react/scripts/setup_project.js
 ```
 
 ### Basic Example
