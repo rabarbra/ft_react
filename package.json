@@ -1,5 +1,5 @@
 {
-  "name": "ft_react",
+  "name": "@rabarbra/ft_react",
   "version": "1.0.0",
   "type": "module",
   "description": "Naive implementation of React-like library",

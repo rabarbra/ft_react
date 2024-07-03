@@ -12,7 +12,7 @@ This is a naive implementation of a React-like library designed to manage a virt
 ## Installation
 
 ```bash
-npm -i ft_react
+npm -i @rabarbra/ft_react
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ npm -i ft_react
 ### Basic Example
 
 ```javascript
-import ftReact from 'ft_react';
+import ftReact from '@rabarbra/ft_react';
 
 function App() {
   const [count, setCount] = ftReact.useState(0);
