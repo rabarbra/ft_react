@@ -21,6 +21,10 @@ npm install @rabarbra/ft_react
 
 ```bash
 ./node_modules/@rabarbra/ft_react/scripts/setup_project.js
+# Start development server
+npm start
+# Create production build
+npm build
 ```
 
 ### Basic Example

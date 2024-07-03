@@ -22,7 +22,7 @@ execSync('npm install --save-dev \
 // Create project structure
 fs.mkdirSync('src');
 fs.writeFileSync('src/app.jsx', `
-import ftReact from "ft_react";
+import ftReact from "@rabarbra/ft_react";
 
 const App = (props) => {
     return <span>Hello World!</span>
