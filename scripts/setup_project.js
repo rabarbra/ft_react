@@ -1,10 +1,6 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import { execSync } from 'child_process';
-
-
-const projectDir = `${process.cwd()}`;
 
 // Install dev dependencies
 execSync('npm install --save-dev \
@@ -99,8 +95,8 @@ module.exports = () => {
 
 `);
 
-fs.mkdirSync('src/public');
 // Create index.html
+fs.mkdirSync('src/public');
 fs.writeFileSync('src/public/index.html', `
 <!DOCTYPE html>
 <html lang="en">
@@ -122,4 +118,4 @@ packageJson.scripts.start = "webpack serve --mode development --open";
 packageJson.scripts.build = "webpack --mode=production --node-env=production";
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 
-console.log(`Project ${projectName} is set up. Run 'npm start' to start the development server.`);
+console.log(`Project is set up. Run 'npm start' to start the development server.`);

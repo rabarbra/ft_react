@@ -1,5 +1,3 @@
-Here is the updated documentation with examples transformed to JSX syntax:
-
 # Naive React-like Library
 
 This is a naive implementation of a React-like library designed to manage a virtual DOM, component lifecycle, and state management. 
@@ -19,7 +17,7 @@ npm install @rabarbra/ft_react
 
 ## Usage
 
-### Generate basic app
+### Generate your app template
 
 ```bash
 ./node_modules/@rabarbra/ft_react/scripts/setup_project.js
@@ -45,7 +43,7 @@ function App() {
   );
 }
 
-const container = document.getElementById('root');
+const container = document.getElementById('app');
 ftReact.render(<App />, container);
 ```
 
@@ -64,7 +62,7 @@ const element = <div id="my-div">Hello, World!</div>;
 Renders a virtual DOM element to the actual DOM.
 
 ```jsx
-const container = document.getElementById('root');
+const container = document.getElementById('app');
 ftReact.render(element, container);
 ```
 
@@ -98,25 +96,6 @@ function Timer() {
 
   return <div>Time: {time}</div>;
 }
-```
-
-## Examples
-
-### Simple Counter
-
-```jsx
-function Counter() {
-  const [count, setCount] = ftReact.useState(0);
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
-  );
-}
-
-const container = document.getElementById('root');
-ftReact.render(<Counter />, container);
 ```
 
 ## License
