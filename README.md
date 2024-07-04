@@ -20,11 +20,16 @@ npm install @rabarbra/ft_react
 ### Generate your app template
 
 ```bash
-./node_modules/@rabarbra/ft_react/scripts/setup_project.js
+# Init a new project
+./node_modules/@rabarbra/ft_react/scripts/init-project.js
+# or 
+npx init-project
+
 # Start development server
 npm start
-# Create production build
-npm build
+
+# Create production build (it will create ./dist folder containing production build)
+npm run build
 ```
 
 ### Basic Example
